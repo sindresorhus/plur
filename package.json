@@ -1,0 +1,37 @@
+{
+  "name": "plur",
+  "version": "0.0.0",
+  "description": "Naively pluralize a word",
+  "license": "MIT",
+  "repository": "sindresorhus/plur",
+  "author": {
+    "name": "Sindre Sorhus",
+    "email": "sindresorhus@gmail.com",
+    "url": "sindresorhus.com"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "node test.js"
+  },
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    "plur",
+    "plural",
+    "plurals",
+    "pluralize",
+    "singular",
+    "count",
+    "word",
+    "string",
+    "str",
+    "naive",
+    "simple"
+  ],
+  "devDependencies": {
+    "ava": "0.0.4"
+  }
+}
