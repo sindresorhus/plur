@@ -1,6 +1,6 @@
 {
   "name": "plur",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Naively pluralize a word",
   "license": "MIT",
   "repository": "sindresorhus/plur",
