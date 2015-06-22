@@ -11,6 +11,15 @@ module.exports = function (str, plural, count) {
 		var plur = 's';
 		// get the tail of the string to check if the case should be upper or lower
 		var strCase = str.slice(1) === str.slice(1).toUpperCase() ? 'Upper' : 'Lower';
+		var end = str.slice(-2);
+
+		if (/s|x|z|ch|sh/i.test(end)) {
+			plur = 'es';
+		} else if (/y/i.test(end)) {
+			str = str.slice(0, -1);
+			plur = 'ies';
+		}
+
 		plural = str + setCase(plur, strCase);
 	}
 
