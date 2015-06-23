@@ -22,6 +22,10 @@ plur('hero', 'heroes', 4);
 //=> 'heroes'
 ```
 
+Words ending in *s*, *x*, *z*, *ch*, *sh* will be pluralized with *-es*, like
+*foxes*. Words ending in *y* will be pluralized by replacing *y* with *-ies* as
+in *puppies*. Plur will also try to match the case if the word is in caps, like
+*UNICORNS!*
 
 ## API
 
