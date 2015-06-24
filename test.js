@@ -2,7 +2,7 @@
 var test = require('ava');
 var plur = require('./');
 
-test('Plur', function (t) {
+test(function (t) {
 	t.assert(plur('unicorn', 0) === 'unicorns');
 	t.assert(plur('unicorn', 1) === 'unicorn');
 	t.assert(plur('unicorn', 2) === 'unicorns');
