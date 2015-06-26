@@ -15,5 +15,7 @@ test(function (t) {
 	t.assert(plur('batch', 2) === 'batches');
 	t.assert(plur('bush', 2) === 'bushes');
 	t.assert(plur('guppy', 2) === 'guppies');
+	t.assert(plur('UNICORN', 2) === 'UNICORNS');
+	t.assert(plur('puppY', 2) === 'puppIES');
 	t.end();
 });
