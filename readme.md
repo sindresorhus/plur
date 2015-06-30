@@ -18,6 +18,12 @@ var plur = require('plur');
 plur('unicorn', 4);
 //=> 'unicorns'
 
+plur('puppy', 2);
+//=> puppies
+
+plur('box', 2);
+//=> boxes
+
 plur('hero', 'heroes', 4);
 //=> 'heroes'
 ```
