@@ -24,8 +24,8 @@ plur('puppy', 2);
 plur('box', 2);
 //=> boxes
 
-plur('hero', 'heroes', 4);
-//=> 'heroes'
+plur('woman', 'women', 2);
+//=> 'women'
 ```
 
 
