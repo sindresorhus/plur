@@ -13,16 +13,16 @@ $ npm install --save plur
 ## Usage
 
 ```js
-var plur = require('plur');
+const plur = require('plur');
 
 plur('unicorn', 4);
 //=> 'unicorns'
 
 plur('puppy', 2);
-//=> puppies
+//=> 'puppies'
 
 plur('box', 2);
-//=> boxes
+//=> 'boxes'
 
 plur('woman', 'women', 2);
 //=> 'women'
