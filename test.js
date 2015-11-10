@@ -17,5 +17,14 @@ test(function (t) {
 	t.assert(plur('guppy', 2) === 'guppies');
 	t.assert(plur('UNICORN', 2) === 'UNICORNS');
 	t.assert(plur('puppY', 2) === 'puppIES');
+	t.assert(plur('man', 2) === 'men');
+	t.assert(plur('woman', 2) === 'women');
+	t.assert(plur('fish', 2) === 'fish');
+	t.assert(plur('sheep', 2) === 'sheep');
+	t.assert(plur('tooth', 2) === 'teeth');
+	t.assert(plur('tomato', 2) === 'tomatoes');
+	t.assert(plur('torpedo', 2) === 'torpedoes');
+	t.assert(plur('wife', 2) === 'wives');
+	t.assert(plur('shelf', 2) === 'shelves');
 	t.end();
 });
