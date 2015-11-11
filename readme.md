@@ -24,8 +24,8 @@ plur('puppy', 2);
 plur('box', 2);
 //=> 'boxes'
 
-plur('woman', 'women', 2);
-//=> 'women'
+plur('cactus', 2);
+//=> 'cacti'
 ```
 
 
@@ -44,7 +44,7 @@ Word to pluralize.
 Type: `string`  
 Default: Words ending in *s*, *x*, *z*, *ch*, *sh* will be pluralized with *-es*, like
 *foxes*. Words ending in *y* will be pluralized by replacing *y* with *-ies* as
-in *puppies*.
+in *puppies*. Irregular nouns will use this [list](https://github.com/sindresorhus/irregular-plurals/blob/master/irregular-plurals.json).
 
 Pluralized word.
 
