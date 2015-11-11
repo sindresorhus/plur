@@ -1,6 +1,11 @@
 'use strict';
 module.exports = function (str, plural, count) {
-	if (typeof plural === 'number') {
+	var irregular = require('./irregular.json');
+
+	if (str in irregular) {
+		plural = irregular[str];
+	}
+	else if (typeof plural === 'number') {
 		count = plural;
 
 		plural = (str.replace(/(?:s|x|z|ch|sh)$/i, '$&e').replace(/y$/i, 'ie') + 's')
