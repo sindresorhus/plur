@@ -1,6 +1,6 @@
 # plur [![Build Status](https://travis-ci.org/sindresorhus/plur.svg?branch=master)](https://travis-ci.org/sindresorhus/plur)
 
-> Naively pluralize a word
+> Pluralize a word
 
 
 ## Install
@@ -49,6 +49,8 @@ in *puppies*. Irregular nouns will use this [list](https://github.com/sindresorh
 Pluralized word.
 
 The plural suffix will match the case of the last letter in the word.
+
+This option is only for extreme edge-cases. You probably won't need it.
 
 #### count
 
