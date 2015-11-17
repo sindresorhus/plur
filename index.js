@@ -10,7 +10,7 @@ module.exports = function (str, plural, count) {
 	if (typeof plural === 'number') {
 		count = plural;
 		var strCase = str.slice(-1) === str.slice(-1).toUpperCase() ? 'Upper' : 'Lower';
-		plural = (str.replace(/(s|x|z|ch|sh)$/i, '$1e').replace(/y$/i, 'ie') + 's')
+		plural = (str.replace(/(s|x|z|ch|sh)$/i, '$1e').replace(/([^aeiou])y$/i, '$1ie') + 's')
 			.replace(/i?e?s$/i, setCase(strCase));
 	}
 
