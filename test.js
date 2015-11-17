@@ -25,5 +25,7 @@ test(t => {
 	t.is(fn('torpedo', 2), 'torpedoes');
 	t.is(fn('wife', 2), 'wives');
 	t.is(fn('shelf', 2), 'shelves');
+	t.is(fn('day', 2), 'days');
+	t.is(fn('diy', 2), 'diys');
 	t.end();
 });
