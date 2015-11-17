@@ -17,5 +17,6 @@ test(function (t) {
 	t.assert(plur('guppy', 2) === 'guppies');
 	t.assert(plur('UNICORN', 2) === 'UNICORNS');
 	t.assert(plur('puppY', 2) === 'puppIES');
+	t.assert(plur('day', 2) === 'days');
 	t.end();
 });
