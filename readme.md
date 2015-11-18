@@ -42,9 +42,12 @@ Word to pluralize.
 #### plural
 
 Type: `string`  
-Default: Words ending in *s*, *x*, *z*, *ch*, *sh* will be pluralized with *-es*, like
-*foxes*. Words ending in *y* will be pluralized by replacing *y* with *-ies* as
-in *puppies*. Irregular nouns will use this [list](https://github.com/sindresorhus/irregular-plurals/blob/master/irregular-plurals.json).
+Default:
+
+- Irregular nouns will use this [list](https://github.com/sindresorhus/irregular-plurals/blob/master/irregular-plurals.json).
+- Words ending in *s*, *x*, *z*, *ch*, *sh* will be pluralized with *-es* (eg. *foxes*).
+- Words ending in *y* that are preceded by a consonant will be pluralized by replacing *y* with *-ies* (eg. *puppies*).
+- All other words will have "s" added to the end (eg. *days*).
 
 Pluralized word.
 
