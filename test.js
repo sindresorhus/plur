@@ -27,5 +27,6 @@ test(t => {
 	t.is(fn('shelf', 2), 'shelves');
 	t.is(fn('day', 2), 'days');
 	t.is(fn('diy', 2), 'diys');
-	t.end();
+	t.is(fn('child', 2), 'children');
+	t.is(fn('child', 1), 'child');
 });
