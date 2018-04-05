@@ -1,5 +1,5 @@
 'use strict';
-var irregularPlurals = require('irregular-plurals');
+const irregularPlurals = require('irregular-plurals');
 
 module.exports = function (str, plural, count) {
 	if (typeof plural === 'number') {
@@ -10,8 +10,8 @@ module.exports = function (str, plural, count) {
 		plural = irregularPlurals[str];
 	} else if (typeof plural !== 'string') {
 		plural = (str.replace(/(?:s|x|z|ch|sh)$/i, '$&e').replace(/([^aeiou])y$/i, '$1ie') + 's')
-			.replace(/i?e?s$/i, function (m) {
-				var isTailLowerCase = str.slice(-1) === str.slice(-1).toLowerCase();
+			.replace(/i?e?s$/i, m => {
+				const isTailLowerCase = str.slice(-1) === str.slice(-1).toLowerCase();
 				return isTailLowerCase ? m.toLowerCase() : m.toUpperCase();
 			});
 	}

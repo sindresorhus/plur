@@ -1,5 +1,5 @@
 import test from 'ava';
-import fn from './';
+import fn from '.';
 
 test(t => {
 	t.is(fn('unicorn', 0), 'unicorns');
@@ -22,7 +22,6 @@ test(t => {
 	t.is(fn('sheep', 2), 'sheep');
 	t.is(fn('tooth', 2), 'teeth');
 	t.is(fn('tomato', 2), 'tomatoes');
-	t.is(fn('torpedo', 2), 'torpedoes');
 	t.is(fn('wife', 2), 'wives');
 	t.is(fn('shelf', 2), 'shelves');
 	t.is(fn('day', 2), 'days');
