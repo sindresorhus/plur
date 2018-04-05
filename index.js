@@ -16,5 +16,5 @@ module.exports = function (str, plural, count) {
 			});
 	}
 
-	return count === 1 ? str : plural;
+	return Math.abs(count) === 1 ? str : plural;
 };

@@ -28,4 +28,6 @@ test(t => {
 	t.is(fn('diy', 2), 'diys');
 	t.is(fn('child', 2), 'children');
 	t.is(fn('child', 1), 'child');
+	t.is(fn('unicorn', -1), 'unicorn');
+	t.is(fn('unicorn', -2), 'unicorns');
 });
