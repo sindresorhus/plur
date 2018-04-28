@@ -6,8 +6,13 @@ module.exports = (word, plural, count) => {
 		count = plural;
 	}
 
-	if (irregularPlurals.has(word)) {
-		plural = irregularPlurals.get(word);
+	if (irregularPlurals.has(word.toLowerCase())) {
+		plural = irregularPlurals.get(word.toLowerCase());
+		const firstLetter = word.charAt(0);
+		const isFirstLetterUpperCase = firstLetter === firstLetter.toUpperCase();
+		if (isFirstLetterUpperCase) {
+			plural = firstLetter.toUpperCase() + plural.slice(1);
+		}
 	} else if (typeof plural !== 'string') {
 		plural = (word.replace(/(?:s|x|z|ch|sh)$/i, '$&e').replace(/([^aeiou])y$/i, '$1ie') + 's')
 			.replace(/i?e?s$/i, m => {
