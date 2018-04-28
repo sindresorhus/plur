@@ -35,4 +35,6 @@ test('main', t => {
 	t.is(m('shelf', 2), 'shelves');
 	t.is(m('Shelf', 1), 'Shelf');
 	t.is(m('Shelf', 2), 'Shelves');
+	t.is(m('SHELF', 1), 'SHELF');
+	t.is(m('SHELF', 2), 'SHELVES');
 });

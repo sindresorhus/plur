@@ -13,6 +13,10 @@ module.exports = (word, plural, count) => {
 		if (isFirstLetterUpperCase) {
 			plural = firstLetter.toUpperCase() + plural.slice(1);
 		}
+		const isWholeWordUpperCase = word === word.toUpperCase();
+		if (isWholeWordUpperCase) {
+			plural = plural.toUpperCase();
+		}
 	} else if (typeof plural !== 'string') {
 		plural = (word.replace(/(?:s|x|z|ch|sh)$/i, '$&e').replace(/([^aeiou])y$/i, '$1ie') + 's')
 			.replace(/i?e?s$/i, m => {
