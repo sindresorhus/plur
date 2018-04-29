@@ -8,11 +8,13 @@ module.exports = (word, plural, count) => {
 
 	if (irregularPlurals.has(word.toLowerCase())) {
 		plural = irregularPlurals.get(word.toLowerCase());
+
 		const firstLetter = word.charAt(0);
 		const isFirstLetterUpperCase = firstLetter === firstLetter.toUpperCase();
 		if (isFirstLetterUpperCase) {
 			plural = firstLetter.toUpperCase() + plural.slice(1);
 		}
+
 		const isWholeWordUpperCase = word === word.toUpperCase();
 		if (isWholeWordUpperCase) {
 			plural = plural.toUpperCase();
