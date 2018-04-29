@@ -13,6 +13,7 @@ test('main', t => {
 	t.is(m('fizz', 2), 'fizzes');
 	t.is(m('batch', 2), 'batches');
 	t.is(m('bush', 2), 'bushes');
+	t.is(m('Bush', 2), 'Bushes');
 	t.is(m('guppy', 2), 'guppies');
 	t.is(m('UNICORN', 2), 'UNICORNS');
 	t.is(m('puppY', 2), 'puppIES');
@@ -30,4 +31,10 @@ test('main', t => {
 	t.is(m('child', 1), 'child');
 	t.is(m('unicorn', -1), 'unicorn');
 	t.is(m('unicorn', -2), 'unicorns');
+	t.is(m('shelf', 1), 'shelf');
+	t.is(m('shelf', 2), 'shelves');
+	t.is(m('Shelf', 1), 'Shelf');
+	t.is(m('Shelf', 2), 'Shelves');
+	t.is(m('SHELF', 1), 'SHELF');
+	t.is(m('SHELF', 2), 'SHELVES');
 });
