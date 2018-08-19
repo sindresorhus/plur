@@ -18,6 +18,7 @@
 	"files": [
 		"index.js"
 	],
+	"types": "index.d.ts",
 	"keywords": [
 		"plur",
 		"plural",
@@ -38,5 +39,10 @@
 	"devDependencies": {
 		"ava": "*",
 		"xo": "*"
+	},
+	"xo": {
+		"ignores": [
+			"index.d.ts"
+		]
 	}
 }
