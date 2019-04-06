@@ -21,9 +21,9 @@ module.exports = (word, plural, count) => {
 		}
 	} else if (typeof plural !== 'string') {
 		plural = (word.replace(/(?:s|x|z|ch|sh)$/i, '$&e').replace(/([^aeiou])y$/i, '$1ie') + 's')
-			.replace(/i?e?s$/i, m => {
+			.replace(/i?e?s$/i, match => {
 				const isTailLowerCase = word.slice(-1) === word.slice(-1).toLowerCase();
-				return isTailLowerCase ? m.toLowerCase() : m.toUpperCase();
+				return isTailLowerCase ? match.toLowerCase() : match.toUpperCase();
 			});
 	}
 

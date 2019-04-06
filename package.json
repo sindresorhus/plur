@@ -20,7 +20,6 @@
 		"index.d.ts"
 	],
 	"keywords": [
-		"plur",
 		"plural",
 		"plurals",
 		"pluralize",
@@ -28,7 +27,6 @@
 		"count",
 		"word",
 		"string",
-		"str",
 		"irregular",
 		"noun",
 		"nouns"
