@@ -1,6 +1,6 @@
 {
 	"name": "plur",
-	"version": "3.1.0",
+	"version": "3.1.1",
 	"description": "Pluralize a word",
 	"license": "MIT",
 	"repository": "sindresorhus/plur",
