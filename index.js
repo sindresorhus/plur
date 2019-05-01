@@ -5,6 +5,11 @@ module.exports = (word, plural, count) => {
 	if (typeof plural === 'number') {
 		count = plural;
 	}
+	
+	// improve performance by returning non-plural word sooner
+	if(typeof count === 'number' && Math.abs(count) <  2){
+		return word;
+	}
 
 	if (irregularPlurals.has(word.toLowerCase())) {
 		plural = irregularPlurals.get(word.toLowerCase());
@@ -26,6 +31,6 @@ module.exports = (word, plural, count) => {
 				return isTailLowerCase ? match.toLowerCase() : match.toUpperCase();
 			});
 	}
-
-	return Math.abs(count) === 1 ? word : plural;
+	
+	return plural;
 };
