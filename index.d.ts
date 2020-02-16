@@ -31,8 +31,8 @@ plur('box', 2);
 plur('cactus', 2);
 //=> 'cacti'
 ```
- */
-declare function plur(word: string, count?: number): string;
-declare function plur(word: string, plural: string, count?: number): string;
+*/
+declare function plur(word: string, count: number): string;
+declare function plur(word: string, plural: string, count: number): string;
 
 export = plur;

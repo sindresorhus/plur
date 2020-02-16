@@ -2,13 +2,11 @@
 
 > Pluralize a word
 
-
 ## Install
 
 ```
 $ npm install plur
 ```
-
 
 ## Usage
 
@@ -28,10 +26,9 @@ plur('cactus', 2);
 //=> 'cacti'
 ```
 
-
 ## API
 
-### plur(word, [plural], count)
+### plur(word, plural?, count)
 
 #### word
 
@@ -41,7 +38,7 @@ Word to pluralize.
 
 #### plural
 
-Type: `string`<br>
+Type: `string`\
 Default:
 
 - Irregular nouns will use this [list](https://github.com/sindresorhus/irregular-plurals/blob/master/irregular-plurals.json).
@@ -60,8 +57,3 @@ This option is only for extreme edge-cases. You probably won't need it.
 Type: `number`
 
 Count to determine whether to use singular or plural.
-
-
-## License
-
-MIT © [Sindre Sorhus](https://sindresorhus.com)
