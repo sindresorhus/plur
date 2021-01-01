@@ -1,4 +1,4 @@
-# plur [![Build Status](https://travis-ci.org/sindresorhus/plur.svg?branch=master)](https://travis-ci.org/sindresorhus/plur)
+# plur
 
 > Pluralize a word
 
