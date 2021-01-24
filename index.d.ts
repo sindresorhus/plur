@@ -8,7 +8,7 @@ This option is only for extreme edge-cases. You probably won't need it.
 
 Default:
 
-- Irregular nouns will use this [list](https://github.com/sindresorhus/irregular-plurals/blob/master/irregular-plurals.json).
+- Irregular nouns will use this [list](https://github.com/sindresorhus/irregular-plurals/blob/main/irregular-plurals.json).
 - Words ending in *s*, *x*, *z*, *ch*, *sh* will be pluralized with *-es* (eg. *foxes*).
 - Words ending in *y* that are preceded by a consonant will be pluralized by replacing *y* with *-ies* (eg. *puppies*).
 - All other words will have "s" added to the end (eg. *days*).
