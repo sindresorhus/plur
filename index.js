@@ -27,5 +27,5 @@ module.exports = (word, plural, count) => {
 			});
 	}
 
-	return Math.abs(count) === 1 ? word : plural;
+	return Math.abs(count) <= 1 ? word : plural;
 };
