@@ -1,7 +1,6 @@
-'use strict';
-const irregularPlurals = require('irregular-plurals');
+import irregularPlurals from 'irregular-plurals';
 
-module.exports = (word, plural, count) => {
+export default function plur(word, plural, count) {
 	if (typeof plural === 'number') {
 		count = plural;
 	}
@@ -28,4 +27,4 @@ module.exports = (word, plural, count) => {
 	}
 
 	return Math.abs(count) === 1 ? word : plural;
-};
+}

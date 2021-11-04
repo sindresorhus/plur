@@ -1,5 +1,5 @@
 import test from 'ava';
-import plur from '.';
+import plur from './index.js';
 
 test('main', t => {
 	t.is(plur('unicorn', 0), 'unicorns');

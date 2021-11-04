@@ -4,14 +4,14 @@
 
 ## Install
 
-```
-$ npm install plur
+```sh
+npm install plur
 ```
 
 ## Usage
 
 ```js
-const plur = require('plur');
+import plur from 'plur';
 
 plur('unicorn', 4);
 //=> 'unicorns'
@@ -34,7 +34,7 @@ plur('cactus', 2);
 
 Type: `string`
 
-Word to pluralize.
+The word to pluralize.
 
 #### plural
 
@@ -46,7 +46,7 @@ Default:
 - Words ending in *y* that are preceded by a consonant will be pluralized by replacing *y* with *-ies* (eg. *puppies*).
 - All other words will have "s" added to the end (eg. *days*).
 
-Pluralized word.
+Explicitly provide the pluralized word.
 
 The plural suffix will match the case of the last letter in the word.
 
@@ -56,4 +56,4 @@ This option is only for extreme edge-cases. You probably won't need it.
 
 Type: `number`
 
-Count to determine whether to use singular or plural.
+The count to determine whether to use singular or plural.
