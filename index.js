@@ -11,7 +11,7 @@ export default function plur(word, plural, count) {
 		const firstLetter = word.charAt(0);
 		const isFirstLetterUpperCase = firstLetter === firstLetter.toUpperCase();
 		if (isFirstLetterUpperCase) {
-			plural = firstLetter.toUpperCase() + plural.slice(1);
+			plural = firstLetter + plural.slice(1);
 		}
 
 		const isWholeWordUpperCase = word === word.toUpperCase();
