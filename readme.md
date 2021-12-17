@@ -13,6 +13,9 @@ npm install plur
 ```js
 import plur from 'plur';
 
+plur('rainbow');
+//=> 'rainbows'
+
 plur('unicorn', 4);
 //=> 'unicorns'
 

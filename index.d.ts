@@ -19,6 +19,9 @@ Default:
 ```
 import plur from 'plur';
 
+plur('rainbow');
+//=> 'rainbows'
+
 plur('unicorn', 4);
 //=> 'unicorns'
 
@@ -32,5 +35,5 @@ plur('cactus', 2);
 //=> 'cacti'
 ```
 */
-export default function plur(word: string, count: number): string;
+export default function plur(word: string, count?: number): string;
 export default function plur(word: string, plural: string, count: number): string;
