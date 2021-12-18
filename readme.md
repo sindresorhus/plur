@@ -31,7 +31,7 @@ plur('cactus', 2);
 
 ## API
 
-### plur(word, plural?, count)
+### plur(word, plural?, count?)
 
 #### word
 
@@ -59,4 +59,4 @@ This option is only for extreme edge-cases. You probably won't need it.
 
 Type: `number`
 
-The count to determine whether to use singular or plural.
+The count to determine whether to use singular or plural. If omitted, defaults to plural.
