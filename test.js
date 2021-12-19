@@ -2,6 +2,7 @@ import test from 'ava';
 import plur from './index.js';
 
 test('main', t => {
+	t.is(plur('unicorn'), 'unicorns');
 	t.is(plur('unicorn', 0), 'unicorns');
 	t.is(plur('unicorn', 1), 'unicorn');
 	t.is(plur('unicorn', 2), 'unicorns');
