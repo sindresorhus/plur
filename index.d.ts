@@ -1,3 +1,4 @@
+/* eslint-disable jsdoc/check-param-names -- The block documents both overloads, so it lists `plural` as well. */
 /**
 Pluralize a word.
 

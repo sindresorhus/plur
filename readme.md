@@ -26,7 +26,7 @@ plur('box', 2);
 //=> 'boxes'
 
 plur('cactus', 2);
-//=> 'cacti'
+//=> 'cactuses'
 ```
 
 ## API

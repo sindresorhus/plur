@@ -19,8 +19,8 @@ export default function plur(word, plural, count) {
 			plural = plural.toUpperCase();
 		}
 	} else if (typeof plural !== 'string') {
-		plural = (word.replace(/(?:s|x|z|ch|sh)$/i, '$&e').replace(/([^aeiou])y$/i, '$1ie') + 's')
-			.replace(/i?e?s$/i, match => {
+		plural = (word.replace(/(?:[sxz]|ch|sh)$/iv, '$&e').replace(/(?<consonant>[^aeiou])y$/iv, '$<consonant>ie') + 's')
+			.replace(/i?e?s$/iv, match => {
 				const isTailLowerCase = word.slice(-1) === word.slice(-1).toLowerCase();
 				return isTailLowerCase ? match.toLowerCase() : match.toUpperCase();
 			});
