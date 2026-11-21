@@ -47,3 +47,9 @@ test('irregular words come from the irregular list', () => {
 	assert.equal(plur('radius', 2), 'radii');
 	assert.equal(plur('Cactus', 2), 'Cactuses');
 });
+
+test('explicit plural overrides the irregular list', () => {
+	assert.equal(plur('medium', 'mediums', 2), 'mediums');
+	assert.equal(plur('medium', 'mediums', 1), 'medium');
+	assert.equal(plur('medium', 2), 'media');
+});

@@ -5,25 +5,27 @@ export default function plur(word, plural, count) {
 		count = plural;
 	}
 
-	if (irregularPlurals.has(word.toLowerCase())) {
-		plural = irregularPlurals.get(word.toLowerCase());
+	if (typeof plural !== 'string') {
+		if (irregularPlurals.has(word.toLowerCase())) {
+			plural = irregularPlurals.get(word.toLowerCase());
 
-		const firstLetter = word.charAt(0);
-		const isFirstLetterUpperCase = firstLetter === firstLetter.toUpperCase();
-		if (isFirstLetterUpperCase) {
-			plural = firstLetter + plural.slice(1);
-		}
+			const firstLetter = word.charAt(0);
+			const isFirstLetterUpperCase = firstLetter === firstLetter.toUpperCase();
+			if (isFirstLetterUpperCase) {
+				plural = firstLetter + plural.slice(1);
+			}
 
-		const isWholeWordUpperCase = word === word.toUpperCase();
-		if (isWholeWordUpperCase) {
-			plural = plural.toUpperCase();
+			const isWholeWordUpperCase = word === word.toUpperCase();
+			if (isWholeWordUpperCase) {
+				plural = plural.toUpperCase();
+			}
+		} else {
+			plural = (word.replace(/(?:[sxz]|ch|sh)$/iv, '$&e').replace(/(?<consonant>[^aeiou])y$/iv, '$<consonant>ie') + 's')
+				.replace(/i?e?s$/iv, match => {
+					const isTailLowerCase = word.slice(-1) === word.slice(-1).toLowerCase();
+					return isTailLowerCase ? match.toLowerCase() : match.toUpperCase();
+				});
 		}
-	} else if (typeof plural !== 'string') {
-		plural = (word.replace(/(?:[sxz]|ch|sh)$/iv, '$&e').replace(/(?<consonant>[^aeiou])y$/iv, '$<consonant>ie') + 's')
-			.replace(/i?e?s$/iv, match => {
-				const isTailLowerCase = word.slice(-1) === word.slice(-1).toLowerCase();
-				return isTailLowerCase ? match.toLowerCase() : match.toUpperCase();
-			});
 	}
 
 	return Math.abs(count) === 1 ? word : plural;
